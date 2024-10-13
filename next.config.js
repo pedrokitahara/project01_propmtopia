@@ -2,9 +2,6 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    eslint: {
-      ignoreDuringBuilds: true,
-    },
     serverComponentsExternalPackages: ["mongoose"],
   },
   images: {
@@ -14,10 +11,9 @@ const nextConfig = {
     config.experiments = {
       ...config.experiments,
       topLevelAwait: true,
-    };
-    return config;
-  },
-};
+    }
+    return config
+  }
+}
 
-// CommonJS export for Next.js
-module.exports = nextConfig;
+module.exports = nextConfig
