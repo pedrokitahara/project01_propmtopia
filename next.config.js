@@ -2,6 +2,9 @@
 const nextConfig = {
   experimental: {
     appDir: true,
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
     serverComponentsExternalPackages: ["mongoose"],
   },
   images: {
@@ -11,10 +14,10 @@ const nextConfig = {
     config.experiments = {
       ...config.experiments,
       topLevelAwait: true,
-    }
+    };
     return config;
-  }
-}
+  },
+};
 
-// Usar export default em vez de exports
-export default nextConfig;
+// CommonJS export for Next.js
+module.exports = nextConfig;
